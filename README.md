@@ -1,2 +1,0 @@
-# gg
-good girl token
