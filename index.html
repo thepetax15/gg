@@ -1,26 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Good Girl ($GG)</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Good Girl ($GG) | The Cutest Crypto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/favicon.ico">
 </head>
 <body>
-  <div class="container">
-    <!-- Logo -->
-    <div class="logo">GG</div>
-    
-    <!-- Headline -->
-    <h1>Good Girl ($GG)</h1>
-    <p>The cutest crypto in the world! 🐾</p>
-    
-    <!-- Wallet Connect -->
-    <button id="connectWallet">Connect Wallet</button>
-    
-    <!-- Price Chart -->
-    <div id="coingecko-chart"></div>
-  </div>
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="GG Logo" class="logo">
+      <h1>Good Girl ($GG)</h1>
+    </div>
+    <button id="connectWallet" class="btn-teal">
+      <span id="walletText">Connect Wallet</span>
+      <span id="walletAddress" style="display:none;"></span>
+    </button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>The Goodest Token in Crypto</h2>
+      <p>Earn rewards just for holding! 🦴</p>
+      <div class="cta-buttons">
+        <a href="https://app.uniswap.org/#/swap?outputCurrency=YOUR_CONTRACT_ADDRESS" 
+           target="_blank" class="btn-pink">Buy $GG</a>
+        <a href="#how-to-buy" class="btn-outline">How to Buy</a>
+      </div>
+    </div>
+    <div class="floating-token"></div>
+  </section>
+
+  <!-- Price Chart -->
+  <section class="chart-section">
+    <div class="coingecko-chart" 
+         data-coingecko-id="good-girl" 
+         data-currency="usd" 
+         data-height="400"
+         data-theme="dark"></div>
+  </section>
+
+  <!-- How to Buy -->
+  <section id="how-to-buy" class="buy-section">
+    <h2>How to Buy $GG</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Get ETH</h3>
+        <p>Buy Ethereum on Binance, Coinbase, or Kraken</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Connect Wallet</h3>
+        <p>Use MetaMask or Trust Wallet</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Swap on Uniswap</h3>
+        <button onclick="copyContract()" class="btn-small">Copy Contract</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>FAQ</h2>
+    <div class="faq-item">
+      <button class="faq-question">What is $GG?</button>
+      <div class="faq-answer">
+        <p>Good Girl ($GG) is a community-driven token with automatic rewards for holders.</p>
+      </div>
+    </div>
+    <!-- Add more FAQ items -->
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-links">
+      <a href="https://twitter.com/GoodGirlToken" target="_blank">Twitter</a>
+      <a href="https://t.me/GoodGirlToken" target="_blank">Telegram</a>
+      <a href="https://etherscan.io/token/YOUR_CONTRACT_ADDRESS" target="_blank">Etherscan</a>
+    </div>
+    <p>© 2024 Good Girl Token. Not financial advice.</p>
+  </footer>
 
   <script src="app.js"></script>
+  <script src="https://widgets.coingecko.com/coingecko-coin-price-chart-widget.js"></script>
 </body>
 </html>
