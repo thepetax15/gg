@@ -1,44 +1,67 @@
+/* === Main Styles === */
 body {
   font-family: 'Poppins', sans-serif;
-  background: #0F172A;
+  background: #0F172A; /* Dark blue */
   color: white;
-  text-align: center;
   margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
 }
 
+/* Logo Animation */
 .logo {
-  width: 100px;
-  height: 100px;
-  background: linear-gradient(135deg, #00F5D0 0%, #FFB6C1 100%);
-  border-radius: 50%;
+  width: 120px;
+  height: 120px;
   margin: 30px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  font-weight: bold;
   animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
+  0% { transform: translateY(0); }
   50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+  100% { transform: translateY(0); }
 }
 
-#connectWallet {
-  background: #FFB6C1;
+/* Buttons */
+.btn-pink {
+  background: #FFB6C1; /* Soft pink */
   color: #0F172A;
   border: none;
   padding: 12px 24px;
   border-radius: 50px;
   font-weight: bold;
   cursor: pointer;
-  margin: 20px 0;
+  transition: all 0.3s;
 }
 
-#coingecko-chart {
+.btn-pink:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #FFB6C1;
+}
+
+/* Price Chart */
+.chart-container {
   margin: 40px auto;
-  max-width: 800px;
+  background: #1E293B;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  color: #94A3B8;
+}
+
+.social-links a {
+  color: #00F5D0; /* Teal */
+  margin: 0 10px;
+  text-decoration: none;
 }
