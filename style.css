@@ -1,0 +1,44 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0F172A;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #00F5D0 0%, #FFB6C1 100%);
+  border-radius: 50%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+#connectWallet {
+  background: #FFB6C1;
+  color: #0F172A;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+#coingecko-chart {
+  margin: 40px auto;
+  max-width: 800px;
+}
